@@ -1,0 +1,20 @@
+$navbar-brand-font-size: $navbar-brand-font-size * 1.35;
+
+.navbar-brand {
+  padding: 0;
+  font-size: $navbar-brand-font-size;
+}
+
+.navbar-brand .logo {
+  height: $navbar-brand-font-size * 1.5;
+  width: $navbar-brand-font-size * 1.5;
+}
+
+.css-color-select .dropdown {
+  border-color: $primary !important;
+}
+
+.css-animation-select .dropdown {
+  border-color: $primary !important;
+  background: $white !important;
+}

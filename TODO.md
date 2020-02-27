@@ -13,6 +13,7 @@
     - [ ] Add Snackbar for cache being downloaded  (src/serviceWorker.js)
     - [ ] Add Banner for needing to close all tabs  (src/serviceWorker.js)
     - [ ] Add something saying that it can be installed to homescreen (https://developers.google.com/web/fundamentals/app-install-banners/) (https://developers.google.com/web/fundamentals/app-install-banners/promoting-install-mobile)
+    - [ ] enable it in index.js
     - [ ] 
 * [ ] Add way to add test data to the Local Storage (and maybe database?)
 * [ ] Use Lighthouse (in Audit tab of Chrome DevTools) to audit and fix problems
