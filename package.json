@@ -1,0 +1,79 @@
+{
+  "name": "lexie-logger",
+  "description": "General logging app to track daily activities",
+  "version": "1.0.0",
+  "homepage": "https://github.com/UrsineRaven/LexieLoggerV2#readme",
+  "author": {
+    "name": "UrsineRaven"
+  },
+  "bugs": {
+    "url": "https://github.com/UrsineRaven/LexieLoggerV2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UrsineRaven/LexieLoggerV2.git"
+  },
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "sqlite3": "^4.1.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,tx,tsx}": [
+      "organize-imports-cli",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "run-s set-publish-env build",
+    "deploy": "run-s -c gh-publish set-development-env",
+    "set-publish-env": "copyfiles -u 2 configs/publish/.env ./",
+    "set-development-env": "copyfiles -u 2 configs/development/.env ./",
+    "gh-publish": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "gh-pages": "^2.1.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "organize-imports-cli": "^0.4.0",
+    "prettier": "^1.19.1"
+  }
+}
