@@ -6,10 +6,8 @@ import { ReactComponent as Logo } from '../resources/LexieIcon.svg';
 
 /**
  * The Navigation Bar component for this app. It remains at the top at all times.
- * @param {Object} props - The props object for NavigationBar
- * @param {string} props.basename - The base folder of the hosted application. Needed for the Logo link.
  */
-function NavigationBar(props) {
+function NavigationBar() {
   const [navCollapsed, setNavCollapsed] = useState(true);
 
   function changeCollapsed(toggle) {
@@ -21,7 +19,7 @@ function NavigationBar(props) {
 
   return (
     <Navbar expand="lg" bg="primary" variant="dark" expanded={!navCollapsed}>
-      <Navbar.Brand href={props.basename}>
+      <Navbar.Brand href={process.env.PUBLIC_URL}>
         {/* TODO: determine if I want to change this to a Link instead (so that it doesn't reload the app) */}
         <Logo className="d-inline-block align-top logo" />
         {' LexieLogger'}

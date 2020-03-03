@@ -18,7 +18,7 @@ Steps to install this project:
 1. clone this repo
 1. ~~if you want to run using https, create a "ssl" folder in src and link to your fullchain cert as "cert.pem" and your key as "key.pem", otherwise edit src/site-config.json and change "Use_Https" to false~~ ***Currently not supported. You can host this behind my [NodeJS-Reverse-Proxy](https://github.com/UrsineRaven/NodeJS-Reverse-Proxy) to make it HTTPS in the meantime***
 1. Run `npm install --production` command
-1. Change **REACT_APP_BASE_PATH** in .env (unless you host in the subfolder already specified there)
+1. Change **PUBLIC_URL** in .env (unless you host in the subfolder already specified there)
 1. Run `npm run build` command
 
 **Note:** If you plan on developing, leave off the `--production` flag.

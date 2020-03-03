@@ -6,7 +6,7 @@ const config = require('./siteConfig.json');
 const app = express();
 
 const BasePath = fs.readFileSync(path.join(__dirname, '..', '.env'), 'utf-8')
-                   .match(/REACT_APP_BASE_PATH=[^\r\n]+/)[0]
+                   .match(/PUBLIC_URL=[^\r\n]+/)[0]
                    .split('=')[1]
                    .replace(/\/+$/,'');
 

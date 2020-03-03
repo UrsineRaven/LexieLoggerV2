@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../helpers/JSDocTypeDefs';
-const basepath = process.env.REACT_APP_BASE_PATH;
+const basepath = process.env.PUBLIC_URL;
 
 //#region Test Data        TODO: Remove
 const testDataEventTypes = [

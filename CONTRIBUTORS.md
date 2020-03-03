@@ -2,7 +2,7 @@
 
 You are welcome to contribute in any of the usual ways (Fork & Pull, Submit Issue on GitHub, etc.).
 
-**Note:** Don't forget to change REACT_APP_BASE_PATH in .env unless you host in a LexieLogger subfolder.
+**Note:** Don't forget to change PUBLIC_URL in .env unless you host in a LexieLogger subfolder.
 
 ## NPM Scripts
 

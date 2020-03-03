@@ -7,11 +7,10 @@ import About from './pages/About';
 
 // Router
 function AppRouter() {
-  const basename = process.env.REACT_APP_BASE_PATH;
   return (
-    <Router basename={basename}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Container>
-        <NavigationBar basename={basename} />
+        <NavigationBar />
 
         <DbRoutes />
         <Route path="/about/" component={About} />

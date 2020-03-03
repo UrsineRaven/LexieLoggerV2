@@ -3,6 +3,7 @@
 * [X] ~~***Create a Repo for LexieLoggerV2***~~ [2020-02-26]
 * [ ] Update everything to use the new logo
 * [ ] Determine which resolutions of PNG I need to generate (and update the relevant places)
+* [ ] Consolidate configuration (siteConfig.json, .env, package.json, etc.)
 * [ ] Update About Page
 * [ ] Make more stuff configurable (see LexieLogger's siteConfig.json)
 * [ ] Add SSL support (and update README accordingly)
