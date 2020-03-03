@@ -1,0 +1,68 @@
+{
+	"masterPicture": "src/resources/LexieIcon.svg",
+	"iconsPath": "/LexieLogger",
+	"design": {
+		"ios": {
+			"pictureAspect": "backgroundAndMargin",
+			"backgroundColor": "#158cba",
+			"margin": "14%",
+			"assets": {
+				"ios6AndPriorIcons": false,
+				"ios7AndLaterIcons": false,
+				"precomposedIcons": true,
+				"declareOnlyDefaultIcon": true
+			},
+			"appName": "LexieLogger"
+		},
+		"desktopBrowser": {
+			"design": "raw"
+		},
+		"windows": {
+			"pictureAspect": "noChange",
+			"backgroundColor": "#2d89ef",
+			"onConflict": "override",
+			"assets": {
+				"windows80Ie10Tile": true,
+				"windows10Ie11EdgeTiles": {
+					"small": true,
+					"medium": true,
+					"big": true,
+					"rectangle": true
+				}
+			},
+			"appName": "LexieLogger"
+		},
+		"androidChrome": {
+			"pictureAspect": "noChange",
+			"themeColor": "#158cba",
+			"manifest": {
+				"name": "LexieLogger",
+				"display": "standalone",
+				"orientation": "notSet",
+				"onConflict": "override",
+				"declared": true
+			},
+			"assets": {
+				"legacyIcon": false,
+				"lowResolutionIcons": false
+			}
+		},
+		"safariPinnedTab": {
+			"pictureAspect": "blackAndWhite",
+			"threshold": 43.75,
+			"themeColor": "#158cba"
+		}
+	},
+	"settings": {
+		"compression": 3,
+		"scalingAlgorithm": "Mitchell",
+		"errorOnImageTooSmall": false,
+		"readmeFile": false,
+		"htmlCodeFile": false,
+		"usePathAsIs": false
+	},
+	"versioning": {
+		"paramName": "v",
+		"paramValue": "2"
+	}
+}

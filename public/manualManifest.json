@@ -1,0 +1,15 @@
+{
+  "name": "LexieLogger",
+  "short_name": "LexieLogger",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#158CBA",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

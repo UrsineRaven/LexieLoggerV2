@@ -1,7 +1,7 @@
 {
     "Site": {
         "Name":"LexieLogger",
-        "Description":"View and log events during the day.",
+        "Description":"General logging app to track daily activities",
         "Author":"TODO",
         "Url":"TODO",
         "Port":3031,

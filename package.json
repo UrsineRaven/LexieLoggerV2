@@ -16,8 +16,10 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "cli-real-favicon": "0.0.8",
     "express": "^4.17.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -37,14 +39,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "run-s react-build post-build",
+    "react-build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "run-s set-publish-env build",
     "deploy": "run-s -c gh-publish set-development-env",
     "set-publish-env": "copyfiles -u 2 configs/publish/.env ./",
     "set-development-env": "copyfiles -u 2 configs/development/.env ./",
-    "gh-publish": "gh-pages -d build"
+    "gh-publish": "gh-pages -d build",
+    "post-build": "node ./configs/GenerateFavicons.js",
+    "dev-build": "run-s react-build dev-post-build",
+    "dev-post-build": "node ./configs/development/PostBuild.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -72,7 +78,6 @@
     "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
-    "npm-run-all": "^4.1.5",
     "organize-imports-cli": "^0.4.0",
     "prettier": "^1.19.1"
   }
