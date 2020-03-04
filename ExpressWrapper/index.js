@@ -23,7 +23,7 @@ app.use(function logger(req, res, next) {
 
 app.use(`${BasePath}/api`, api);
 app.get('/*', function(req, res) {
-  const file = path.join(__dirname, '..', req.url.replace(BasePath, '/build'));
+  const file = path.join(__dirname, '..', req.url.replace(BasePath, '/build').split('?')[0]);
   fs.stat(file, (err, stats) => {
     if (!err && stats.isFile())
       res.sendFile(file);
