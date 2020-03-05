@@ -19,7 +19,7 @@ Steps to install this project:
 1. ~~if you want to run using https, create a "ssl" folder in src and link to your fullchain cert as "cert.pem" and your key as "key.pem", otherwise edit src/site-config.json and change "Use_Https" to false~~ ***Currently not supported. You can host this behind my [NodeJS-Reverse-Proxy](https://github.com/UrsineRaven/NodeJS-Reverse-Proxy) to make it HTTPS in the meantime***
 1. Run `npm install --production` command
 1. Change **PUBLIC_URL** in .env (unless you host in the subfolder already specified there)
-1. Run `npm run build` command
+1. Run `npm run build` command (this command needs access to the internet to generate the icons for the app)
 
 **Note:** If you plan on developing, leave off the `--production` flag.
 
@@ -45,4 +45,4 @@ Create new types of events to be logged, or edit exiting event types. There is a
 
 Manage the settings for the site. These are saved and applied per device (so it doesn't affect anyone else).
 
-###### This React portion of this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###### The React portion of this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

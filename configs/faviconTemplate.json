@@ -1,6 +1,6 @@
 {
 	"masterPicture": "src/resources/LexieIcon.svg",
-	"iconsPath": "/LexieLogger",
+	"iconsPath": "POPULATED FROM PUBLIC_URL IN.env",
 	"design": {
 		"ios": {
 			"pictureAspect": "backgroundAndMargin",
@@ -12,7 +12,7 @@
 				"precomposedIcons": true,
 				"declareOnlyDefaultIcon": true
 			},
-			"appName": "LexieLogger"
+			"appName": "POPULATED FROM Site.Name IN siteConfig.json"
 		},
 		"desktopBrowser": {
 			"design": "raw"
@@ -30,13 +30,13 @@
 					"rectangle": true
 				}
 			},
-			"appName": "LexieLogger"
+			"appName": "POPULATED FROM Site.Name IN siteConfig.json"
 		},
 		"androidChrome": {
 			"pictureAspect": "noChange",
 			"themeColor": "#158cba",
 			"manifest": {
-				"name": "LexieLogger",
+				"name": "POPULATED FROM Site.Name IN siteConfig.json",
 				"display": "standalone",
 				"orientation": "notSet",
 				"onConflict": "override",
@@ -63,6 +63,6 @@
 	},
 	"versioning": {
 		"paramName": "v",
-		"paramValue": "2"
+		"paramValue": "0"
 	}
 }

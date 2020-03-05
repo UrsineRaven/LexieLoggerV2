@@ -22,4 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Manually added all below this line
 *.bak
+
+# Generated Files
+configs/faviconConfig.json

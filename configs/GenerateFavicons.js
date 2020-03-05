@@ -12,11 +12,20 @@ const RealFaviconPath = path.resolve(__dirname, '..', 'node_modules',
                                      'cli-real-favicon', 'real-favicon.js');
 const BuildDirPath = path.resolve(__dirname, '..', 'build');
 
-const FavConfigPath = path.resolve(__dirname, 'favicon.json');
+const FavConfigPath = path.resolve(__dirname, 'faviconConfig.json');
+const FavTemplatePath = path.resolve(__dirname, 'faviconTemplate.json');
 const FavDataPath = path.resolve(__dirname, 'faviconData.json');
 
 //#region Massage Favicon Configuration
-const faviconConfig = require(FavConfigPath);
+const faviconConfig = require(FavTemplatePath);
+
+// Try to load the config that was generated last time, otherwise use template
+let oldConfig;
+try {
+    oldConfig = require(FavConfigPath);
+} catch (error) {
+    oldConfig = faviconConfig;
+}
 
 // Set base path
 faviconConfig.iconsPath = BasePath;
@@ -27,7 +36,7 @@ faviconConfig.design.windows.appName = siteConfig.Site.Name;
 faviconConfig.design.androidChrome.manifest.name = siteConfig.Site.Name;
 
 // Increment version
-faviconConfig.versioning.paramValue = (parseInt(faviconConfig.versioning.paramValue)+1).toString();
+faviconConfig.versioning.paramValue = (parseInt(oldConfig.versioning.paramValue)+1).toString();
 
 fs.writeFileSync(FavConfigPath, JSON.stringify(faviconConfig, null,"\t"));
 //#endregion
