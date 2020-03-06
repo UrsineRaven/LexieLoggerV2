@@ -8,6 +8,6 @@
         "Use_Https":false
     },
     "Database": {
-        "File":"./database.sqlite"
+        "File":"../configs/generated/database.sqlite"
     }
 }

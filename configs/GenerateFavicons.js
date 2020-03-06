@@ -12,9 +12,12 @@ const RealFaviconPath = path.resolve(__dirname, '..', 'node_modules',
                                      'cli-real-favicon', 'real-favicon.js');
 const BuildDirPath = path.resolve(__dirname, '..', 'build');
 
-const FavConfigPath = path.resolve(__dirname, 'faviconConfig.json');
+const GeneratedPath = path.resolve(__dirname, 'generated');
 const FavTemplatePath = path.resolve(__dirname, 'faviconTemplate.json');
-const FavDataPath = path.resolve(__dirname, 'faviconData.json');
+const FavConfigPath = path.resolve(GeneratedPath, 'faviconConfig.json');
+const FavDataPath = path.resolve(GeneratedPath, 'faviconData.json');
+
+if (!fs.existsSync(GeneratedPath)) fs.mkdirSync(GeneratedPath);
 
 //#region Massage Favicon Configuration
 const faviconConfig = require(FavTemplatePath);

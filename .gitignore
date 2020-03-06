@@ -24,6 +24,7 @@ yarn-error.log*
 
 # Manually added all below this line
 *.bak
+*.sqlite
 
 # Generated Files
-configs/faviconConfig.json
+configs/generated/
